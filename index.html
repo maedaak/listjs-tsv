@@ -11,24 +11,28 @@
 <body class="container">
   <h1>List.jsとtsvによる「１万件」書誌検索サンプルページ</h1>
   <p>
-    List.jsとTSVで「１万件」程度の書誌検索サンプルページを作ってみました。
- 　 Code は<a href="https://github.com/maedaak/listjs-tsv/" target="_blank">こちら</a>にあります。
-  　より詳しくは<a href="https://github.com/maedaak/listjs-tsv/wiki" target="_blank">Wiki</a>をご参照ください。
+    List.jsとTSVで「１万件」程度の書誌検索サンプルページを作ってみました。<br>
+    Code は<a href="https://github.com/maedaak/listjs-tsv/" target="_blank">こちら</a>にあります。
+    より詳しくは<a href="https://github.com/maedaak/listjs-tsv/wiki" target="_blank">Wiki</a>をご参照ください。
   </p>
   <!-- list.jsのブロック idはlist.jsの呼び出しに使う　HTML末尾のスクリプトで指定している -->
   <div id="listdata">
-    <div class="form-group">
+    <div class="form-group row">
       <label for="keyword">文字列をタイプ　<span class="alert">※　半角スペース区切りでAND検索可能</span></label>
       <!-- classをsearchにし、list.jsの検索欄に -->
-      <input id="keyword" class="search form-control form-control-lg" placeholder="input any word" size="50" />
-      <select id="lang"  class="form-control form-control-lg" onChange="List();">
-        <option value="any"> --- </option>
-        <option value="eng">英語</option>
-        <option value="ger">ドイツ語</option>
-        <option value="chi">中国語</option>
-      </select>
-      <span id="hits"></span>
+      <div class="col-md-8">
+        <input id="keyword" class="search form-control form-control-lg" placeholder="input any word" size="50" />
+      </div>
+      <div class="col-md-4">
+        <select id="lang"  class="form-control form-control-lg" onChange="List();">
+          <option value="any"> --- </option>
+          <option value="eng">英語</option>
+          <option value="ger">ドイツ語</option>
+          <option value="chi">中国語</option>
+        </select>
+      </div>
     </div>
+    <span id="hits"></span>
     <!-- classをpaginationにし、list.jsのページネーションに -->
     <div class="form-group">
       <ul class="pagination list-inline">
