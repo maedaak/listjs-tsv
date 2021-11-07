@@ -20,6 +20,9 @@ List.jsの基本的な機能をもとに、次の作りこみを行っている�
 - ファジー検索プラグインを追加、これによりアルファベットの大文字小文字に関係なくマッチするようになった
 - filterを使った絞り込み（言語に適用）
 
+## 現在の開発状況・評価
+- Wiki ( https://github.com/maedaak/listjs-tsv/wiki )にあり。
+
 ## 参考
 ### code4lib japan 2021ライトニングトーク
 - 発表資料 https://www.slideshare.net/genroku/web-listjs-jekyll-github-pages
