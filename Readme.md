@@ -49,7 +49,7 @@ List.jsの基本的な機能をもとに、次の作りこみを行っている�
 - GitHub Pagesで作ったサンプルページ https://maedaak.github.io/listjs_jikyll-test
 ### 関連サイト
 - List.jsのHTML内検索機能を使った書誌「１万件」検索サンプルページ
- https://maedaak.github.io/cat10000/
+ - https://maedaak.github.io/cat10000/
 - sheetdb.jsとExcelを使った簡易書誌検索サンプルページ
- https://maedaak.github.io/sheetdb/
+ - https://maedaak.github.io/sheetdb/
 
