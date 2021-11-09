@@ -17,6 +17,24 @@ NACSIS-CATの総合目録データベースのCC-BY書誌情報を使用した�
 ## HTMLテンプレート
 - List.jsの付属のテンプレート機能を使っている
 
+## インターフェイス
+- インクリメンタルサーチ
+- キーワード半角スペース区切りでAND検索
+- プルダウンメニューによる絞り込み（文字列中間一致で設定）
+- ファジー検索(Diff Match and Patchベース)
+- ヒット件数表示
+- ページネーション
+
+## 開発内容
+List.jsの基本的な機能をもとに、次の作りこみを行っている。
+- 大量データ対応
+    - 大量リストに合わせ、ページネーション表示のパラメータ調整
+    - 大量リストに合わせ、List.jsのsearchDelayパラメータの値を750に
+- iOS Safari対応    
+- ヒット件数の表示（可能かどうかを含め要確認）
+- List.jsのfilterを使った絞り込み（書誌の言語に適用）
+- List.jsのファジー検索プラグインを追加、これによりアルファベットの大文字小文字に関係なくマッチする
+
 ## 利点
 - 書誌「1万件」でも高速に起動する
 - List.jsを使用するため、ユーザ独自コードが少なくて済んでいる
@@ -30,16 +48,6 @@ NACSIS-CATの総合目録データベースのCC-BY書誌情報を使用した�
 - List.jsではliだけではなく、hrなどの要素もレコード区切りとみなすため、レコード中に使うことができない。
 - ただし、hr要素については、p要素の外枠指定で大体することで、この問題を回避することはできる。
 
-## 作りこみ
-List.jsの基本的な機能をもとに、次の作りこみを行っている。
-- 大量データ対応
-    - 大量リストに合わせ、ページネーション表示のパラメータ調整
-    - 大量リストに合わせ、List.jsのsearchDelayパラメータの値を750に
-- iOS Safari対応    
-- ヒット件数の表示（可能かどうかを含め要確認）
-- List.jsのfilterを使った絞り込み（書誌の言語に適用）
-- List.jsのファジー検索プラグインを追加、これによりアルファベットの大文字小文字に関係なくマッチする
-
 ## 現在の開発状況
 - Wiki ( https://github.com/maedaak/listjs-tsv/wiki )にあり。
 
@@ -47,9 +55,9 @@ List.jsの基本的な機能をもとに、次の作りこみを行っている�
 ### code4lib japan 2021ライトニングトーク
 - 発表資料 https://www.slideshare.net/genroku/web-listjs-jekyll-github-pages
 - GitHub Pagesで作ったサンプルページ https://maedaak.github.io/listjs_jikyll-test
+
 ### 関連サイト
 - List.jsのHTML内検索機能を使った書誌「１万件」検索サンプルページ
     - https://maedaak.github.io/cat10000/
 - sheetdb.jsとExcelを使った簡易書誌検索サンプルページ
     - https://maedaak.github.io/sheetdb/
-
