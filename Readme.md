@@ -4,7 +4,7 @@
 https://maedaak.github.io/listjs-tsv/
 
 ## 概要
-List.jsとTSVによる書誌1万件規模での書誌検索サイトのサンプルページである。
+List.js ( https://listjs.com/ )とTSVによる書誌1万件規模での書誌検索サイトのサンプルページである。
 高速化のため書誌データをHTML中に記載するのではなく、TSVから読み込む方法をとった。
 
 ## 使用データ
