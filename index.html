@@ -33,9 +33,11 @@
       </div>
     </div>
     <span id="hits"></span>
-    <!-- classをpaginationにし、list.jsのページネーションに -->
     <div class="form-group">
-      <ul id="pagenation" class="pagination list-inline">
+      <!-- classをpaginationにし、list.jsのページネーションに -->
+      <nav>
+        <ul id="pagenation" class="pagination list-inline"></ul>
+      </nav>
       <!-- <div style="display:none;"> -->
         <li id="list-item">
           <p class="horizon"></p>
@@ -50,7 +52,7 @@
           </dl>
         </li>
       </ul>
-    </div>
+    </div> 
     <ul class="list list-unstyled">
     </ul>
   </div>
@@ -64,7 +66,8 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.min.js"></script>
   <script src = "https://d3js.org/d3.v4.min.js"></script>
   <script>
-    d3.tsv("cat10000.tsv", function(error, values) {
+    const input_file = "cat10000.tsv"; // 入力ファイル指定
+    d3.tsv(input_file, function(error, values) {
       // fuzzy serch設定
       var fuzzyOptions = {
         searchClass: "fuzzy-search",
@@ -89,7 +92,7 @@
           paginationClass: 'pagination',
           innerWindow: 2,
           outerWindow: 1,
-          item: '<li class="page-item"><a class="page page-link" " href="#""></a></li>',
+          item: '<li class="page-item"><a class="page-link" " href="#""></a></li>',
         }
       };
       // list.jsの対象とする<div>のidを指定
@@ -100,8 +103,8 @@
         listObj.search(searchString);
         $('#hits').html(listObj.matchingItems.length + "件ヒットしました");
       });
-      // 項目指定フィルター（部分一致）
-      $('#lang').change(function() {
+      // 項目指定フィルター（文字列部分一致）
+      $('#lang').change(function() { // プルダウンメニューのlangをフィルターで使用
         lang = $('option:selected').val();
         listObj.filter(function(item) {
           if (lang === 'any') {
