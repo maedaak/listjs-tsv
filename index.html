@@ -35,9 +35,7 @@
     <span id="hits"></span>
     <div class="form-group">
       <!-- classをpaginationにし、list.jsのページネーションに -->
-      <nav>
-        <ul id="pagenation" class="pagination list-inline"></ul>
-      </nav>
+      <ul id="pagenation" class="pagination list-inline"></ul>
       <!-- <div style="display:none;"> -->
         <li id="list-item">
           <p class="horizon"></p>
@@ -66,7 +64,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.min.js"></script>
   <script src = "https://d3js.org/d3.v4.min.js"></script>
   <script>
-    const input_file = "cat10000.tsv"; // 入力ファイル指定
+    const input_file = "cat10000_urlq.tsv"; // 入力ファイル指定
     d3.tsv(input_file, function(error, values) {
       // fuzzy serch設定
       var fuzzyOptions = {
