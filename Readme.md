@@ -10,7 +10,7 @@ List.jsにはHTML中のリストやテーブルをそのまま扱う方法と、
 
 ## 使用データ
 NACSIS-CATの総合目録データベースのCC-BY書誌情報を使用した。
-そのままだとRDFのため、大学図書館員のための図書館システム開発練習用データ( https://mbc.dl.itc.u-tokyo.ac.jp/data4librarysystem/ )の図書書誌TSVから、先頭１万件を抽出して使っている。
+そのままだとRDFのため、大学図書館員のための図書館システム開発練習用データ( https://mbc.dl.itc.u-tokyo.ac.jp/data4librarysystem/ )の図書書誌TSVから、先頭１万件を抽出して使っている。CiNiiへのリンクは独自に追加した。
 
 ## 機能
 - インクリメンタルサーチ
