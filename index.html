@@ -35,15 +35,14 @@
     <span id="hits"></span>
     <div class="form-group">
       <!-- classをpaginationにし、list.jsのページネーションに -->
-      <ul id="pagenation" class="pagination list-inline"></ul>
-      <!-- <div style="display:none;"> -->
+      <ul id="pagenation" class="pagination list-inline">
         <li id="list-item">
           <p class="horizon"></p>
           <dl>
             <dt class="title"></dt>
             <dd class="creator"></dd>
             <dd class="publisher"></dd>
-            <dd class="ncid"></dd>
+            <a class="ncid url"></a>
             <dd class="edition"></dd>
             <dd class="publicationDate"></dd>
             <dd class="note"></dd>
@@ -64,7 +63,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/list.fuzzysearch.js/0.1.0/list.fuzzysearch.min.js"></script>
   <script src = "https://d3js.org/d3.v4.min.js"></script>
   <script>
-    const input_file = "cat10000_urlq.tsv"; // 入力ファイル指定
+    const input_file = "cat10000_url.tsv"; // 入力ファイル指定
     d3.tsv(input_file, function(error, values) {
       // fuzzy serch設定
       var fuzzyOptions = {
@@ -77,7 +76,7 @@
       // List.jsの動作パラメータ設定
       var options = {
         // 対象とするclass を指定
-        valueNames: ['title', 'creator', 'publisher', 'ncid', 'language', 'edition', 'note'],
+        valueNames: ['title', 'creator', 'publisher', 'ncid', 'language', 'edition', 'note', {name: 'url', attr: "href"}],
         item: 'list-item',
         // fuzzy search
         plugins: [
@@ -90,7 +89,7 @@
           paginationClass: 'pagination',
           innerWindow: 2,
           outerWindow: 1,
-          item: '<li class="page-item"><a class="page-link" " href="#""></a></li>',
+          item: '<li class="page-item"><a class="page page-link" " href="#""></a></li>',
         }
       };
       // list.jsの対象とする<div>のidを指定
